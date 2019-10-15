@@ -9,7 +9,7 @@
 #umask 022
 
 # Set the wallpaper for i3
-feh --bg-fill ~/Pictures/bash-wallpaper.png
+feh --bg-fill ~/Pictures/wallpaper.jpg
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
