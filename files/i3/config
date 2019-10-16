@@ -229,3 +229,11 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+# Add thin border
+for_window [class=".*"] border pixel 5
+
+client.focused              #353439 #666699 #666699
+client.unfocused            #353439 #666699 #666699
+client.focused_inactive     #353439 #666699 #666699
+client.urgent               #FF0000	#FF0000	#FF0000	
+
