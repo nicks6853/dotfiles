@@ -29,6 +29,7 @@ make && sudo make install
 cd "$(dirname)"
 mkdir -p $HOME/.config/i3 # Ensure directory exists
 cp ../files/i3/config $HOME/.config/i3/config
+cp ../files/i3/wallpaper.jpg $HOME/Pictures/wallpaper.jpg
 
 echo "Installation complete!"
 
