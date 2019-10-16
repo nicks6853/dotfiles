@@ -4,5 +4,5 @@ set -e
 
 cat ../files/bash/.bashrc >> $HOME/.bashrc
 
-: ~/.profile
+: $HOME/.profile
 cp ../files/bash/.profile $HOME/.profile

@@ -2,5 +2,5 @@
 
 set -e
 
-mkdir -p ~/.config/kitty
-cp ../files/kitty/*.conf ~/.config/kitty
+mkdir -p $HOME/.config/kitty
+cp ../files/kitty/*.conf $HOME/.config/kitty

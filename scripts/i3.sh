@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Install the dependencies to build i3-gaps from source
 sudo apt-get install -y i3 libxcb1-dev libxcb-keysyms1-dev \
                         libpango1.0-dev libxcb-util0-dev \
                         libxcb-icccm4-dev libyajl-dev \
@@ -15,7 +16,11 @@ sudo apt-get install -y i3 libxcb1-dev libxcb-keysyms1-dev \
 git clone https://www.github.com/Airblader/i3 $HOME/Downloads/i3-gaps
 
 cd $HOME/Downloads/i3-gaps
+
+# Reconfigure to be able to build on Debian based OS
 autoreconf --force --install
+
+# Create build directory
 rm -rf ./build
 mkdir -p ./build && cd ./build
 
@@ -31,5 +36,5 @@ mkdir -p $HOME/.config/i3 # Ensure directory exists
 cp ../files/i3/config $HOME/.config/i3/config
 cp ../files/i3/wallpaper.jpg $HOME/Pictures/wallpaper.jpg
 
-echo "Installation complete!"
+echo "Installation complete! You should probably reboot your computer now..."
 
