@@ -20,3 +20,5 @@ syntax on
 
 " set yaml formatting for *.j2 files
 au BufReadPost *.j2 set syntax=yaml
+au BufReadPost *.sh set syntax=bash
+
