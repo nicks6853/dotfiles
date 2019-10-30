@@ -2,7 +2,9 @@
 
 set -e
 
+sudo apt-get install -y feh
+
 cat ../files/bash/.bashrc >> $HOME/.bashrc
 
-: ~/.profile
+: $HOME/.profile
 cp ../files/bash/.profile $HOME/.profile

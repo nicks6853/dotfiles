@@ -2,5 +2,5 @@
 
 set -e
 
-touch ~/.vimrc
-cp -r ../files/vim/.vimrc ~/.vimrc
+touch $HOME/.vimrc
+cp -r ../files/vim/.vimrc $HOME/.vimrc
