@@ -50,6 +50,12 @@
      fi
  }
 
+# ==================================
+# Set the AWS_DEFAULT_REGION env var
+# ==================================
+set_region() {
+    export AWS_DEFAULT_REGION="$1"
+}
 
 export PS1="\[\e[93m\]\W\[\033[32m\]\$(git_prompt)\[\033[00m\] \[\e[93m\]$\[\033[00m\] "
 
@@ -77,6 +83,7 @@ alias gm='git commit -m'
 alias ..='cd ../'
 alias activate='. venv/bin/activate'
 alias mysqldump='mysqldump --column-statistics=0'
+alias set-region='set_region'
 
 # If script is present
 if [ -f "$HOME/.custom_bash/create-venv.sh" ]; then
