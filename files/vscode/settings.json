@@ -6,5 +6,8 @@
     "editor.cursorSmoothCaretAnimation": true,
     "workbench.tree.indent": 25,
     "workbench.tree.renderIndentGuides": "always",
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "files.associations": {
+        "*.j2": "yaml"
+    }
 }
