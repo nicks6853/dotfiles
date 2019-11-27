@@ -8,3 +8,5 @@ sudo apt-get install -y compton hsetroot rxvt-unicode \
 mkdir -p $HOME/.config/i3status
 cp ../files/i3status/config $HOME/.config/i3status/config
 
+echo "i3status Configured"
+

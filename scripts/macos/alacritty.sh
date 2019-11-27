@@ -9,3 +9,5 @@ fi
 brew cask install alacritty
 cp ../../files/macos/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
+echo "Alacritty Configured"
+
