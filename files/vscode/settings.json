@@ -9,5 +9,6 @@
     "window.zoomLevel": 0,
     "files.associations": {
         "*.j2": "yaml"
-    }
+    },
+    "editor.fontSize": 10
 }
