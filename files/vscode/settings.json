@@ -1,0 +1,14 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "editor.minimap.enabled": true,
+    "breadcrumbs.enabled": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": true,
+    "workbench.tree.indent": 25,
+    "workbench.tree.renderIndentGuides": "always",
+    "window.zoomLevel": 0,
+    "files.associations": {
+        "*.j2": "yaml"
+    },
+    "editor.fontSize": 10
+}

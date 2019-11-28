@@ -35,5 +35,11 @@ mkdir -p ./build && cd ./build
 # Build using Make
 make && sudo make install
 
-echo "Installation complete! You should probably reboot your computer now..."
+# Copying config over
+cd "$(dirname)"
+mkdir -p $HOME/.config/i3 # Ensure directory exists
+cp ../files/i3/config $HOME/.config/i3/config
+cp ../files/i3/wallpaper.jpg $HOME/Pictures/wallpaper.jpg
+
+echo "i3 Configured"
 
