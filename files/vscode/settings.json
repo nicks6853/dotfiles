@@ -1,4 +1,12 @@
 {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "extensions.ignoreRecommendations": false,
+    "zenMode.hideTabs": false,
+    "zenMode.hideLineNUmbers": false,
+    "zenMode.centerLayout": false,
+    "workbench.activityBar.visible": true,
+    "editor.detectIndentation": false,
     "workbench.colorTheme": "Monokai",
     "editor.minimap.enabled": true,
     "breadcrumbs.enabled": true,
@@ -10,5 +18,38 @@
     "files.associations": {
         "*.j2": "yaml"
     },
-    "editor.fontSize": 10
+    "editor.fontSize": 12,
+    "macros": {
+        "scriptTag": [
+            {
+                "command": "type",
+                "args": {
+                    "text": "<script type=\"text/javascript\"></script>"
+                }
+            },
+            "cursorLeft",
+            "cursorLeft",
+            "cursorLeft",
+            "cursorLeft",
+            "cursorLeft",
+            "cursorLeft",
+            "cursorLeft",
+            "cursorLeft",
+            "cursorLeft"
+        ],
+        "divTag": [
+            {
+                "command": "type",
+                "args": {
+                    "text": "<div></div>"
+                }
+            },
+            "cursorLeft",
+            "cursorLeft",
+            "cursorLeft",
+            "cursorLeft",
+            "cursorLeft",
+            "cursorLeft"
+        ]
+    }
 }
