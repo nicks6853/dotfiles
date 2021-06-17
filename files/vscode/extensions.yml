@@ -1,4 +1,4 @@
 to_install:
-        macros
+        ctf0.macros
         Monokai Night Theme
         wayou.vscode-todo-highlight
