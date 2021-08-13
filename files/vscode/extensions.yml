@@ -1,4 +1,23 @@
-to_install:
+# Install what is needed
+miscellaneous:
         ctf0.macros
-        Monokai Night Theme
+        dcasella.monokai-plusplus
         wayou.vscode-todo-highlight
+        kamikillerto.vscode-colorize
+        vscode-icons-team.vscode-icons
+ruby_rails:
+        bung87.rails
+        rebornix.ruby
+        sianglim.slim
+        vortizhe.simple-ruby-erb
+        bung87.vscode-gemfile
+        Hridoy.rails-snippets
+        wingrunr21.vscode-ruby
+javascript:
+        dbaeumer.vscode-eslint
+        xabikos.JavaScriptSnippets
+text_manipulation:
+        dbankier.vscode-quick-select
+        formulahendry.auto-close-tag
+        qcz.text-power-tools
+
