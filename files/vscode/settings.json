@@ -3,7 +3,7 @@
     "editor.insertSpaces": true,
     "extensions.ignoreRecommendations": false,
     "zenMode.hideTabs": false,
-    "zenMode.hideLineNUmbers": false,
+    "zenMode.hideLineNumbers": false,
     "zenMode.centerLayout": false,
     "workbench.activityBar.visible": true,
     "editor.detectIndentation": false,
