@@ -1,23 +1,30 @@
 # Install what is needed
+theme:
+  dcasella.monokai-plusplus
 miscellaneous:
-        ctf0.macros
-        dcasella.monokai-plusplus
-        wayou.vscode-todo-highlight
-        kamikillerto.vscode-colorize
-        vscode-icons-team.vscode-icons
-ruby_rails:
-        bung87.rails
-        rebornix.ruby
-        sianglim.slim
-        vortizhe.simple-ruby-erb
-        bung87.vscode-gemfile
-        Hridoy.rails-snippets
-        wingrunr21.vscode-ruby
+  esbenp.prettier-vscode
+  jock.svg
+  redhat.vscode-yaml
+  vscode-icons-team.vscode-icons
+  wayou.vscode-todo-highlight
+rails:
+  bung87.rails
+  bung87.vscode-gemfile
+  Hridoy.rails-snippets
+  jnbt.vscode-rufo
+  rebornix.ruby
+  sianglim.slim
+  wingrunr21.vscode-ruby
 javascript:
-        dbaeumer.vscode-eslint
-        xabikos.JavaScriptSnippets
+  dbaeumer.vscode-eslint
+  xabikos.JavaScriptSnippets
 text_manipulation:
-        dbankier.vscode-quick-select
-        formulahendry.auto-close-tag
-        qcz.text-power-tools
+  dbankier.vscode-quick-select
+  qcz.text-power-tools
+serverless:
+  42Crunch.vscode-openapi
+  ThreadHeap.serverless-ide-vscode
+
+
+
 

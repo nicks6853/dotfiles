@@ -1,34 +1,57 @@
 // Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "ctrl+shift+down",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+up",
-        "command": "editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+down",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+up",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-
-    // Custom macros
-    {
-        "key": "ctrl+tab ctrl+s",
-        "command": "macros.scriptTag"
-    },
-    {
-        "key": "ctrl+tab ctrl+d",
-        "command": "macros.divTag"
-    }
+  {
+    "key": "ctrl+shift+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "f5",
+    "command": "editor.action.sortLinesAscending",
+    "when": "editorTextFocus && !editorReadOnly"
+  },
+  {
+    "key": "f6",
+    "command": "editor.action.sortLinesAscending",
+    "when": "editorTextFocus && !editorReadOnly"
+  },
+  {
+    "key": "alt+shift+i",
+    "command": "editor.action.insertCursorAtEndOfEachLineSelected"
+  },
+  {
+    "key": "shift+alt+c",
+    "command": "workbench.files.action.collapseExplorerFolders"
+  },
+  {
+    "key": "ctrl+shift+\\",
+    "command": "workbench.action.editorLayoutSingle"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "prettier.forceFormatDocument"
+  }
 ]
-

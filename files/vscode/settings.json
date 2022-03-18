@@ -1,65 +1,56 @@
 {
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "extensions.ignoreRecommendations": false,
-  "zenMode.hideTabs": false,
-  "zenMode.hideLineNumbers": false,
-  "zenMode.centerLayout": false,
-  "workbench.activityBar.visible": true,
-  "editor.detectIndentation": false,
-  "workbench.colorTheme": "Monokai++",
-  "editor.minimap.enabled": true,
   "breadcrumbs.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": true,
-  "workbench.tree.indent": 25,
-  "workbench.tree.renderIndentGuides": "always",
-  "window.zoomLevel": 0,
+  "editor.detectIndentation": false,
+  "editor.fontSize": 14,
+  "editor.insertSpaces": true,
+  "editor.minimap.enabled": true,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.includeLanguages": {
+    "html.erb": "html"
+  },
+  "eslint.alwaysShowStatus": true,
+  "extensions.ignoreRecommendations": false,
   "files.associations": {
-    "*.j2": "yaml"
+    "*.j2": "yaml",
+    "*.html.erb": "html.erb",
+    "*.css.erb": "css"
   },
-  "editor.fontSize": 12,
-  "macros": {
-    "scriptTag": [
-      {
-        "command": "type",
-        "args": {
-          "text": "<script type=\"text/javascript\"></script>"
-        }
-      },
-      "cursorLeft",
-      "cursorLeft",
-      "cursorLeft",
-      "cursorLeft",
-      "cursorLeft",
-      "cursorLeft",
-      "cursorLeft",
-      "cursorLeft",
-      "cursorLeft"
-    ],
-    "divTag": [
-      {
-        "command": "type",
-        "args": {
-          "text": "<div></div>"
-        }
-      },
-      "cursorLeft",
-      "cursorLeft",
-      "cursorLeft",
-      "cursorLeft",
-      "cursorLeft",
-      "cursorLeft"
-    ]
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
   },
-  "workbench.iconTheme": "vscode-icons",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "rufo.exe": "/usr/local/bin/rufo",
   "search.exclude": {
+    "**/app/assets/images": true,
+    "**/app/assets/config": true,
+    "**/app/assets/base": true,
     "**/backups": true,
     "**/db": true,
     "**/public": true,
     "**/sql": true,
     "**/storage": true,
     "**/tmp": true,
+    "**/bin": true,
     "**/uploads": true
-  }
+  },
+  "window.zoomLevel": -1,
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "Monokai",
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "always",
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideTabs": false,
+  "workbench.iconTheme": "vscode-icons",
 }
