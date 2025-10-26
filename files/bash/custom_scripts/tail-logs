@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+filter="$1" # Grab value to find the log group
+
+log_group_name="$(aws logs describe-log-groups | jq --arg filter "$filter" -r '.logGroups | sort_by(.creationTime) | map(select(.logGroupName | contains($filter))) | .[-1].logGroupName')"
+
+echo -e "${GREEN}Found log group: ${YELLOW}$log_group_name${NO_COLOR}"
+
+# Tail log group, pass along arguments
+aws logs tail $log_group_name --format short "${@:2}"

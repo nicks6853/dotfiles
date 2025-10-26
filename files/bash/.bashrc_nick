@@ -1,0 +1,54 @@
+source "$HOME/custom_scripts/assets/colors"
+
+# Aliases
+alias get-caller="aws sts get-caller-identity"
+alias activate="source .venv/bin/activate"
+alias vim="nvim"
+
+# BEGIN Custom scripts and commands
+alias toggle-audio-input="$HOME/custom_scripts/audio_stuff/toggle_audio_profile.sh"
+alias pre-commit="./.git/hooks/pre-commit"
+alias gl="git log --all --oneline --graph --decorate"
+
+git_branch() {
+    git branch >/dev/null 2>&1
+    if [[ $? -gt 0 ]]; then
+        echo "(none)"
+    else
+        git_branch=$(git branch | awk '/\*/ {print "("$2")"}')
+        echo "${git_branch}"
+    fi
+}
+
+aws_profile () {
+    aws_profile=$(aws configure list | egrep profile | awk '{print "("$2")"}')
+    if [[ "${aws_profile}" == "(<not)" ]]; then
+        echo "(none)"
+    else
+        echo "${aws_profile}"
+    fi
+}
+
+unix-to-local () {
+    # Print help text
+    if [[ $# -lt 1 ]]; then
+        echo -e "Usage: unix-to-local <timestamp>"
+        echo -e "Converts a Unix timestamp to a human-readable local time."
+        echo -e ""
+        echo -e "Arguments:"
+        echo -e "\t<timestamp>  Unix timestamp (seconds since 1970-01-01 00:00:00 UTC)"
+        echo -e ""
+        echo -e "Example:"
+        echo -e "\t./script.sh 1609459200"
+        echo -e "\tOutput: Sat Jan  1 00:00:00 2022"
+        return
+    fi
+
+    date -d "@$1"
+}
+
+export PATH="$PATH:~/custom_scripts"
+
+# Custom bash prompt
+PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 "<%s>")'; PS1='\[\e[38;5;51;1m\]\t\[\e[0m\] \[\e[38;5;208m\]${AWS_PROFILE}\[\e[0m\] \[\e[38;5;48;1m\]\w\[\e[0m\] \[\e[95m\]${PS1_CMD1}\[\e[0m\]\$ '
+
