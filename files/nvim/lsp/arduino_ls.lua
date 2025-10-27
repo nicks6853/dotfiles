@@ -24,7 +24,7 @@ end
 local fqbn = get_arduino_fqbn(find_project_root())
 
 return {
-    name = "arduino-language-server",
+    name = "arduino_ls",
     cmd = {
         "/home/nick/go/bin/arduino-language-server",
         "-cli", "/usr/local/bin/arduino-cli",
@@ -47,8 +47,9 @@ return {
         },
     },
     on_attach = function(client, bufnr)
-        print("attached")
-        vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = false })
-        vim.lsp.semantic_tokens.start(bufnr, client.id)
+        print("Arduino LSP attached")
+        vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
+        -- semantic_tokens is not supported by the arduino-language-server as of Oct 28 2025
+        -- vim.lsp.semantic_tokens.start(bufnr, client.id)
     end,
 }

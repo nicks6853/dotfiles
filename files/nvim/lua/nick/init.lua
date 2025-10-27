@@ -1,7 +1,8 @@
-require("nick.color")
-require("nick.treesitter")
+-- Personal configurations
+require("nick.base")
 require("nick.mappings")
 require("nick.lsp")
-require("nick.auto")
-require("nick.misc")
 
+require("nick.plugins.treesitter")
+require("nick.plugins.mason")
+require("nick.plugins.mason-lspconfig")
