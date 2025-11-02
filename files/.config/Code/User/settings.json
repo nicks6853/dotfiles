@@ -52,5 +52,5 @@
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideTabs": false,
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "vscode-icons"
 }

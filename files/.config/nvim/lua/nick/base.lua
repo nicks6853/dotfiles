@@ -9,8 +9,7 @@ vim.opt.expandtab = true    -- Use spaces instead of tabs for indentation
 
 vim.cmd([[syntax on]])
 
--- Set colorscheme
-vim.cmd("colorscheme monokai")
+vim.cmd([[colorscheme monokai]])
 
 -- Set the behaviour for the autocomplete popup
 vim.cmd[[set completeopt+=menuone,noselect,popup]]

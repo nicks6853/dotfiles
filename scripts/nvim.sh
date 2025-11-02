@@ -5,7 +5,7 @@ set -e
 ARDUINO_LANGUAGE_SERVER_VERSION="0.7.7"
 
 PACKAGES_TO_INSTALL=()
-PACKAGES=("python3-pynvim" "ripgrep" "golang" "clangd")
+PACKAGES=("python3-pynvim" "ripgrep" "golang")
 
 # Check which packages are not installed yet
 for package in "${PACKAGES[@]}"; do
@@ -27,21 +27,12 @@ else
     echo "All required packages are installed."
 fi
 
-# Install the arduino-language-server (configured in neovim)
-go install "github.com/arduino/arduino-language-server@${ARDUINO_LANGUAGE_SERVER_VERSION}"
-
 # Install treesitter-cli
 npm install -g tree-sitter-cli
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-if [ -d "${HOME}/.config/nvim" ]; then
-    echo "neovim config directory already exists! Aborting to prevent overwriting existing configs."
-    exit 1
-fi
-
-echo "Copying neovim configurations to ${HOME}/.config/nvim"
-mkdir -p "${HOME}/.config/nvim"
-cp -r ../files/nvim/* "${HOME}/.config/nvim/"
+echo "neovim is ready to use, make sure to link the dotfiles with stow. See" \
+    " README.md at the root of the repository for more instructions"
 
