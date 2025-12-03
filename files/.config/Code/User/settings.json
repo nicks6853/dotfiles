@@ -1,12 +1,14 @@
 {
   "breadcrumbs.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.detectIndentation": false,
   "editor.fontSize": 14,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontWeight": "600",
   "editor.insertSpaces": true,
   "editor.minimap.enabled": true,
   "editor.suggestSelection": "first",
@@ -45,12 +47,10 @@
     "**/uploads": true
   },
   "window.zoomLevel": -1,
-  "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Monokai",
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "always",
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
-  "zenMode.hideTabs": false,
   "workbench.iconTheme": "vscode-icons"
 }

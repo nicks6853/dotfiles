@@ -25,6 +25,9 @@ Plug('mason-org/mason.nvim')
 -- Install mason-lspconfig to automatically install LSPs for ones enabled by nvim-lspconfig
 Plug('mason-org/mason-lspconfig.nvim')
 
+-- Install monokai neovim theme
+Plug('tanvirtin/monokai.nvim')
+
 -- Install harpoon to jump to files and required nvim-lua
 -- Plug 'nvim-lua/plenary.nvim'
 -- Plug 'ThePrimeagen/harpoon'
