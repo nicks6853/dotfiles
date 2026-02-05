@@ -12,12 +12,12 @@ sudo apt-get install stow
 
 Then, enter the `files` directory in this repository, and run the stow command with the source and target directories.
 
-To install the neovim dotfiles. Run the following command:
+To install the neovim dotfiles. Run the following command from inside the `files/neovim` directory in this repository:
 ```bash
 stow neovim -t "$HOME"
 ```
 
-To install the VSCode dotfiles. Run the following command:
+To install the VSCode dotfiles. Run the following command inside the `files/vscode` directory in this repository:
 ```bash
 stow vscode -t "$HOME"
 ```
