@@ -25,6 +25,9 @@ vim.keymap.set('n', '<leader>p', ':cprev<CR>', { noremap = true, desc = "Go to t
 -- Open definition in a vertical split
 vim.keymap.set('n', 'gsd', '<cmd>vsplit | lua vim.lsp.buf.definition()<CR>', { noremap = true, desc = 'Go to definition in vertical split' })
 
+-- Run autoformatter on file
+vim.keymap.set('n', '<leader>a', ':Autoformat<CR>', { noremap = true, desc = 'Run Autoformatter on the current file' })
+
 -- Add mapping for Ctrl+Space to show the autocomplete box
 vim.keymap.set('i', '<c-space>', function()
     vim.lsp.completion.get()

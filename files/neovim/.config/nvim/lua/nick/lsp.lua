@@ -1,11 +1,13 @@
 -- vim.lsp.enable("arduino_ls")
 vim.lsp.enable("arduino_language_server")
 vim.lsp.enable("bashls")
-vim.lsp.enable("pyright")
+vim.lsp.enable("basedpyright")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("eslint")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("clangd")
+-- vim.ls.enable("ccls")
+vim.lsp.enable("prettier")
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('my.lsp', {}),
