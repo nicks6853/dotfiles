@@ -1,0 +1,40 @@
+#!/bin/bash
+
+set -euo pipefail
+
+function logger() {
+    local timestamp="$(date '+%Y-%m-%d %H:%M:%S')"
+    echo "[${timestamp}] $*"
+}
+
+function install_platformio() {
+    logger "Installing platformio..."
+
+    local temp_dir
+    temp_dir="$(mktemp -d)"
+
+    [[ -d "${temp_dir}" ]] || {
+        logger "Failed to create installation directory" >&2
+        exit 1
+    }
+
+    pushd "${temp_dir}" >/dev/null || {
+        logger "Failed to navigate to installation directory" >&2
+        exit 1
+    }
+    logger "Downloading installation script from the web..."
+    curl -fsSL -o get-platformio.py \
+        "https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py"
+
+    logger "Running install script..."
+    python3 get-platformio.py
+    popd >/dev/null
+
+    rm -rf "${temp_dir}" || {
+        logger "Failed to clean up installation directory ${temp_dir}"
+        exit 1
+    }
+    logger "Installed platformio successfully!"
+}
+
+install_platformio
