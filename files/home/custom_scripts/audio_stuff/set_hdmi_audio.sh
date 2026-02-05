@@ -5,8 +5,8 @@ set -x
 current_profile="$(pactl list cards | awk -v RS='' '/bluez/' | awk -F': ' '/Active Profile/ { print $2 }')"
 
 if ! [[ "$current_profile" == "off" ]]; then
-  echo "shut off bluez"
-  bash /home/nick/custom_scripts/set_card_profile.sh "bluez_card.50_C2_75_64_E7_67" "off"
+    echo "shut off bluez"
+    bash /home/nick/custom_scripts/set_card_profile.sh "bluez_card.50_C2_75_64_E7_67" "off"
 fi
 
 CARD_NAME="alsa_card.pci-0000_64_00.1.13"
