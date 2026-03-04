@@ -10,7 +10,6 @@ vim.opt.scroll = 10         -- Set the scroll amount (for <C-d> and <C-u>, for e
 vim.opt.cursorline = true   -- Set the cursor line to be highlighted
 
 vim.cmd([[syntax on]])
-vim.cmd([[colorscheme monokai]])
 
 -- Set the behaviour for the autocomplete popup
 vim.cmd[[set completeopt+=menuone,noselect,popup]]

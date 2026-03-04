@@ -31,6 +31,9 @@ Plug('tanvirtin/monokai.nvim')
 -- Install amazon q
 Plug('git@github.com:awslabs/amazonq.nvim.git')
 
+-- Install Monokai Pro theme
+Plug('loctvl842/monokai-pro.nvim')
+
 -- Install harpoon to jump to files and required nvim-lua
 -- Plug 'nvim-lua/plenary.nvim'
 -- Plug 'ThePrimeagen/harpoon'
