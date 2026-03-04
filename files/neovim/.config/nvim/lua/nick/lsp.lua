@@ -4,10 +4,26 @@ vim.lsp.enable("bashls")
 vim.lsp.enable("basedpyright")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("eslint")
-vim.lsp.enable("ts_ls")
 vim.lsp.enable("clangd")
--- vim.ls.enable("ccls")
-vim.lsp.enable("prettier")
+
+vim.lsp.config("eslint", {
+    cmd = { "vscode-eslint-language-server", "--stdio" },
+    filetypes = {
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+    },
+    root_markers = {
+        ".eslintrc.json",
+        ".eslintrc.js",
+        ".eslintrc.cjs",
+        "eslint.config.js",
+        "package.json",
+    },
+})
+
+vim.lsp.enable("eslint")
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('my.lsp', {}),

@@ -25,8 +25,20 @@ vim.keymap.set('n', '<leader>p', ':cprev<CR>', { noremap = true, desc = "Go to t
 -- Open definition in a vertical split
 vim.keymap.set('n', 'gsd', '<cmd>vsplit | lua vim.lsp.buf.definition()<CR>', { noremap = true, desc = 'Go to definition in vertical split' })
 
--- Run autoformatter on file
-vim.keymap.set('n', '<leader>a', ':Autoformat<CR>', { noremap = true, desc = 'Run Autoformatter on the current file' })
+-- Run Autoformat on the current file
+vim.keymap.set('n', '<leader>a', ':Autoformat<CR>', { noremap = true, desc = 'Run Autoformat on the current file' })
+
+-- Add mapping for Amazon Q AI Agent
+vim.keymap.set({'n', 'v'}, '<leader>q', ':<C-u>\'<,\'>AmazonQ<CR>', { noremap = true, desc = "Run AmazonQ command on selection or current line" })
+
+-- Add mapping to go to next error in file
+vim.keymap.set('n', '<leader>1', vim.diagnostic.goto_prev, { noremap = true, desc = "Go to previous error in file." })
+vim.keymap.set('n', '<leader>2', vim.diagnostic.goto_next, { noremap = true, desc = "Go to next error in file." })
+
+
+-- ==================================== NOTES ========================================
+-- You can check the definition of a function or variable with "K"
+-- ================================== END NOTES ======================================
 
 -- Add mapping for Ctrl+Space to show the autocomplete box
 vim.keymap.set('i', '<c-space>', function()
