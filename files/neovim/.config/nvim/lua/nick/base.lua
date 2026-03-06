@@ -14,6 +14,10 @@ vim.cmd([[syntax on]])
 -- Set the behaviour for the autocomplete popup
 vim.cmd[[set completeopt+=menuone,noselect,popup]]
 
+-- Set the width of the left column to prevent shifting
+-- when LSP errors show up
+vim.cmd[[set signcolumn=yes:2]]
+
 -- Set autoformat to true for the given file types
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = {"*.ino", "*.cpp", "*.h", "*.lua", "*.py" },
