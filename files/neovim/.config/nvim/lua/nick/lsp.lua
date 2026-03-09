@@ -1,7 +1,7 @@
 -- vim.lsp.enable("arduino_ls")
 vim.lsp.enable("arduino_language_server")
 vim.lsp.enable("bashls")
-vim.lsp.enable("basedpyright")
+vim.lsp.enable("pyright")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("eslint")
 vim.lsp.enable("clangd")
