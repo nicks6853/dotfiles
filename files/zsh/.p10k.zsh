@@ -54,6 +54,7 @@
     command_execution_time    # previous command duration
     virtualenv                # python virtual environment
     prompt_char               # prompt symbol
+    aws                       # active aws profile
   )
 
   # Right prompt segments.
