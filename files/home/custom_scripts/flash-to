@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# shellcheck source="/home/nick/custom_scripts/assets/lib.sh"
+source "${HOME}/custom_scripts/assets/lib.sh"
+
+# shellcheck source="./assets/colors"
+source "${HOME}/custom_scripts/assets/colors"
+
+set -e
+
+parseArgs "--flasher,--version" "--flasher,--version" "${@}"
+
+echo "Flashing the following system"
+echo "Gateway IP: 10.6.8.${FLASHER}"
+echo "Version Number: ${VERSION}"
+
+if confirm "${YELLOW}Start flashing${NO_COLOR}"; then
+    sshpass -p "adminpass1!" \
+        ssh -o StrictHostKeyChecking=no "flasher@10.6.4.${FLASHER}" \
+        "screen -dmS flash-to-nick \
+            bash -c 'cd jetson && SKIP_VERSION_CHECK=1 bash flashJetsonXavierNx.sh \
+            --dev --version ${VERSION} && exit'"
+    echo -e "${GREEN}Started flashing process successfully!${NO_COLOR}"
+else
+    echo -e "${RED}Cancelled.${NO_COLOR}"
+    exit 1
+fi
