@@ -53,8 +53,8 @@
     vcs                       # git status
     command_execution_time    # previous command duration
     virtualenv                # python virtual environment
-    prompt_char               # prompt symbol
     aws                       # active aws profile
+    prompt_char               # prompt symbol
   )
 
   # Right prompt segments.
