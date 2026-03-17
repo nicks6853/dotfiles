@@ -2,7 +2,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # You need to download antigen.zsh and put it in the folder below.
@@ -24,6 +24,12 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # ===================== END THEME ===================== #
 
 antigen apply
+
+# Custom bindings
+# Bind Alt+Right Arrow to forward-word
+bindkey '\e[1;3C' forward-word
+# Bind Alt+Left Arrow to backward-word
+bindkey '\e[1;3D' backward-word
 
 # Define aliases
 alias vim="nvim"
