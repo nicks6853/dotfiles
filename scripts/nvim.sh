@@ -22,7 +22,7 @@ if [[ "${#PACKAGES_TO_INSTALL[@]}" -ne 0 ]]; then
     echo "The following required packages are not installed."
     echo "${PACKAGES_TO_INSTALL[@]}"
     echo "Installing..."
-    sudo apt-get install --yes "${PACKAGES_TO_INSTALL[@]}"
+    sudo apt-get install --no-install-recommends --yes "${PACKAGES_TO_INSTALL[@]}"
 else
     echo "All required packages are installed."
 fi

@@ -24,3 +24,10 @@ stow vscode -t "$HOME"
 
 This will symlink all the configuraitons in this repository to the corresponding location in the "~/" directory.
 
+## Install These
+
+Here are programs that you need to install.
+- nvm (Node Version Manager)
+- neovim (check scripts)
+- zsh
+- antigen (check scripts)
