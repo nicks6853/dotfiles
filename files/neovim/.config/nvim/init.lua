@@ -7,15 +7,15 @@ local Plug = vim.fn['plug#']
 -- Specify directory for plugins
 vim.call('plug#begin', "~/.local/share/nvim/plugged")
 
--- Add the vim-autoformat plugin
-Plug('vim-autoformat/vim-autoformat')
+-- Install formatting plugin
+Plug('stevearc/conform.nvim')
 
 -- Install treesitter to parse code as code :)
-Plug('nvim-treesitter/nvim-treesitter', {['branch'] = 'master'})
+Plug('nvim-treesitter/nvim-treesitter', { ['branch'] = 'master' })
 
 -- Install telescope for fuzzy search through files
 Plug('nvim-lua/plenary.nvim')
-Plug('nvim-telescope/telescope.nvim', {['tag'] = '0.1.8'})
+Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.8' })
 
 -- Install lspconfig for easy language server configuration
 Plug('neovim/nvim-lspconfig')
@@ -47,4 +47,3 @@ vim.call('plug#end')
 -- =====================
 
 require("nick")
-

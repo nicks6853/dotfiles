@@ -3,6 +3,7 @@ vim.lsp.enable("arduino_language_server")
 vim.lsp.enable("bashls")
 vim.lsp.enable("pyright")
 vim.lsp.enable("lua_ls")
+vim.lsp.enable("ts_ls")
 vim.lsp.enable("eslint")
 vim.lsp.enable("clangd")
 
@@ -19,8 +20,17 @@ vim.lsp.config("eslint", {
         ".eslintrc.js",
         ".eslintrc.cjs",
         "eslint.config.js",
+        "eslint.config.cjs",
         "package.json",
     },
+    settings = {
+        codeActionOnSave = {
+            enable = true,
+            mode = "all",
+        },
+        format = true,
+        quiet = false,
+    }
 })
 
 vim.lsp.enable("eslint")
@@ -36,8 +46,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
             -- local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
             -- client.server_capabilities.completionProvider.triggerCharacters = chars
 
-            vim.lsp.completion.enable(true, client.id, args.buf, {autotrigger = true})
+            vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
         end
     end
 })
-
