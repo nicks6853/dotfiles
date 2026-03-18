@@ -3,9 +3,9 @@ vim.lsp.enable("arduino_language_server")
 vim.lsp.enable("bashls")
 vim.lsp.enable("pyright")
 vim.lsp.enable("lua_ls")
-vim.lsp.enable("ts_ls")
 vim.lsp.enable("eslint")
 vim.lsp.enable("clangd")
+vim.lsp.enable("ts_ls")
 
 vim.lsp.config("eslint", {
     cmd = { "vscode-eslint-language-server", "--stdio" },

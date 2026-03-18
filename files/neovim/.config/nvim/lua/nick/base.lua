@@ -23,7 +23,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = { "*.ino", "*.cpp", "*.h", "*.lua", "*.py", "*.ts", "*.tsx", "*.js", "*.jsx" },
     callback = function(args)
         -- vim.lsp.buf.format()
-        require("conform").format({ bufnr = args.buf, lsp_format = "fallback" })
+        require("conform").format({ bufnr = args.buf })
     end
 })
 

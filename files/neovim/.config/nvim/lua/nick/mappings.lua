@@ -31,7 +31,7 @@ vim.keymap.set('n', 'gsd', '<cmd>vsplit | lua vim.lsp.buf.definition()<CR>',
 
 -- Run Autoformat on the current file
 vim.keymap.set('n', '<leader>a', function()
-    require("conform").format({ async = true, lsp_format = "fallback" })
+    require("conform").format({ async = true })
 end, { noremap = true, desc = 'Run formatting on the current file' })
 
 -- Add mapping for Amazon Q AI Agent
