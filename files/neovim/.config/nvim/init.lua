@@ -10,6 +10,9 @@ vim.call('plug#begin', "~/.local/share/nvim/plugged")
 -- Install formatting plugin
 Plug('stevearc/conform.nvim')
 
+-- Install linter plugin
+Plug('mfussenegger/nvim-lint')
+
 -- Install treesitter to parse code as code :)
 Plug('nvim-treesitter/nvim-treesitter', { ['branch'] = 'master' })
 

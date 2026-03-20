@@ -4,6 +4,7 @@ require("nick.base")
 require("nick.mappings")
 require("nick.lsp")
 
+require("nick.plugins.nvim-lint")
 require("nick.plugins.conform")
 require("nick.plugins.treesitter")
 require("nick.plugins.mason")
