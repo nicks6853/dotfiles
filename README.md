@@ -31,5 +31,7 @@ Here are programs that you need to install.
 - neovim (check scripts)
 - zsh
 - antigen (check scripts)
-- shellcheck
+- shellcheck (:Mason)
+- stylua (:Mason)
+- shfmt (:Mason)
 

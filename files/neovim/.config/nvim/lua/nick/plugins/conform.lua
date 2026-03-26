@@ -6,6 +6,7 @@ require("conform").setup({
         javascriptreact = { "prettier" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
+        lua = { "stylua" }
     },
     default_format_opts = {
         lsp_format = "fallback",
