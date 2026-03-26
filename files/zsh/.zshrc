@@ -50,3 +50,6 @@ export PATH="${PATH}:${HOME}/custom_scripts"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# If a local zsh config file exists, source it. This can be used for machine-specific configurations.
+[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
