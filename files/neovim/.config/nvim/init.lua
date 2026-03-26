@@ -39,8 +39,8 @@ Plug("loctvl842/monokai-pro.nvim")
 
 -- Add more plugins here as needed
 
--- Local local-only Plug() calls that are in local.lua
-require("local_cfg.plugins")
+-- Local local-only Plug() calls that are in lua/local_cfg/plugins.lua if it exists
+pcall(require, "local_cfg.plugins")
 
 vim.call("plug#end")
 
