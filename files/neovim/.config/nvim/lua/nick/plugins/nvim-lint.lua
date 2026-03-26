@@ -1,7 +1,8 @@
 local lint = require("lint")
 
 lint.linters_by_ft = {
-    python = { "pylint" }
+    python = { "pylint" },
+    sh = { "shellcheck" }
 }
 
 lint.linters.pylint.cmd = function()
