@@ -44,6 +44,7 @@ export NVM_DIR="$HOME/.nvm"
 # Set env variables
 export PATH=$PATH:/home/nick/.local/bin
 export PATH="${PATH}:${HOME}/custom_scripts"
+export PATH="${PATH}:/home/${USER}/.platformio/penv/bin"
 
 # RECOMMENDATIONS
 # - Install fira code nerd font (not regular fira code)
