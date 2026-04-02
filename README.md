@@ -34,4 +34,4 @@ Here are programs that you need to install.
 - shellcheck (:Mason)
 - stylua (:Mason)
 - shfmt (:Mason)
-
+- reformat-gherkin (:Mason)
