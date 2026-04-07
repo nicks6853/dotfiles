@@ -8,6 +8,7 @@ require("conform").setup({
 		typescriptreact = { "prettier" },
 		lua = { "stylua" },
 		cucumber = { "reformat-gherkin" },
+		json = { "prettier" },
 	},
 	default_format_opts = {
 		lsp_format = "fallback",
