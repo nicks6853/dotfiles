@@ -1,3 +1,11 @@
+local function get_black_command()
+	local venv_black = vim.fn.findfile(".venv/bin/black", ".;")
+	if venv_black ~= "" then
+		return venv_black
+	end
+	return "black"
+end
+
 require("conform").setup({
 	formatters_by_ft = {
 		sh = { "shfmt" },
@@ -9,6 +17,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		cucumber = { "reformat-gherkin" },
 		json = { "prettier" },
+		markdown = { "prettier" },
 	},
 	default_format_opts = {
 		lsp_format = "fallback",
@@ -16,6 +25,9 @@ require("conform").setup({
 	formatters = {
 		shfmt = {
 			append_args = { "--indent", "2" },
+		},
+		black = {
+			command = get_black_command,
 		},
 	},
 })

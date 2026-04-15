@@ -1,52 +1,65 @@
 -- vim.lsp.enable("arduino_ls")
 vim.lsp.enable("arduino_language_server")
 vim.lsp.enable("bashls")
-vim.lsp.enable("pyright")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("eslint")
 vim.lsp.enable("clangd")
 vim.lsp.enable("ts_ls")
 
+-- Set root marker
+vim.lsp.config("pyright", {
+	root_markers = {
+		"pyproject.toml",
+		"setup.py",
+		"setup.cfg",
+		"requirements.txt",
+		"Pipfile",
+		"pyrightconfig.json",
+		".git",
+	},
+})
+
+vim.lsp.enable("pyright")
 vim.lsp.config("eslint", {
-    cmd = { "vscode-eslint-language-server", "--stdio" },
-    filetypes = {
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-    },
-    root_markers = {
-        ".eslintrc.json",
-        ".eslintrc.js",
-        ".eslintrc.cjs",
-        "eslint.config.js",
-        "eslint.config.cjs",
-        "package.json",
-    },
-    settings = {
-        codeActionOnSave = {
-            enable = true,
-            mode = "all",
-        },
-        format = true,
-        quiet = false,
-    }
+	cmd = { "vscode-eslint-language-server", "--stdio" },
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+	},
+	root_markers = {
+		".eslintrc.json",
+		".eslintrc.js",
+		".eslintrc.cjs",
+		"eslint.config.js",
+		"eslint.config.cjs",
+		"package.json",
+	},
+	settings = {
+		codeActionOnSave = {
+			enable = true,
+			mode = "all",
+		},
+		format = true,
+		quiet = false,
+	},
 })
 
 vim.lsp.enable("eslint")
 
-vim.api.nvim_create_autocmd('LspAttach', {
-    group = vim.api.nvim_create_augroup('my.lsp', {}),
-    callback = function(args)
-        local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = vim.api.nvim_create_augroup("my.lsp", {}),
+	callback = function(args)
+		local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
-        -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
-        if client:supports_method('textDocument/completion') then
-            -- Optional: trigger autocompletion on EVERY keypress. May be slow!
-            -- local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
-            -- client.server_capabilities.completionProvider.triggerCharacters = chars
+		-- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
+		if client:supports_method("textDocument/completion") then
+			-- Optional: trigger autocompletion on EVERY keypress. May be slow!
+			-- local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
+			-- client.server_capabilities.completionProvider.triggerCharacters = chars
 
-            vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
-        end
-    end
+			vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
+		end
+	end,
 })
