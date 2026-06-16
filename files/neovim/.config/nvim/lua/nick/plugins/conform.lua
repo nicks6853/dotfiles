@@ -18,6 +18,7 @@ require("conform").setup({
 		cucumber = { "reformat-gherkin" },
 		json = { "prettier" },
 		markdown = { "prettier" },
+		css = { "css_lsp" },
 	},
 	default_format_opts = {
 		lsp_format = "fallback",
