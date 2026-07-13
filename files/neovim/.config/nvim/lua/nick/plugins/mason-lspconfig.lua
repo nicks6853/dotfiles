@@ -5,5 +5,6 @@ require("mason-lspconfig").setup({
 		"bashls",
 		"eslint",
 		"ts_ls",
+		"jdtls",
 	},
 })
