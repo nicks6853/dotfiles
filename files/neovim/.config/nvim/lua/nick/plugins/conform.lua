@@ -19,7 +19,6 @@ require("conform").setup({
 		json = { "prettier" },
 		markdown = { "prettier" },
 		css = { "css_lsp" },
-		java = { "injected" },
 	},
 	default_format_opts = {
 		lsp_format = "fallback",
